@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 import UserPosts from "./UserPosts";
-import {  TextField } from "@mui/material";
-import Dashboard from "./Dashboard";
 
 
 const UsersTable = () => {
@@ -35,11 +33,12 @@ const UsersTable = () => {
         <div>
         <div class="displayi">
         <div>
-        <Dashboard/>
             <h1>Users Table</h1>
-           <TextField variant ="outlined" label ="Name"  value={nameFilter} onChange={(e)=>setFilterName(e.target.value)}/>
+            <label for="name">Name:</label>
+<input type="text" id="name" name="name"  value={nameFilter} onChange={(e)=>setFilterName(e.target.value)}/>
            <br></br>
-           <TextField variant ="outlined" label ="Email" value={emailFilter} onChange={(e)=>setFilterEmail(e.target.value)}/>
+           <label for="email">Email:</label>
+           <input type="text" id="email" name="email" value={emailFilter} onChange={(e)=>setFilterEmail(e.target.value)}/>
             <table class="users">
                 <thead>
                     <tr>

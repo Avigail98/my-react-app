@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import UserPosts from "./UserPosts";
 
-
 const UsersTable = () => {
 
+    const [loading , setLoading] = useState(true)
     const [userData,setUserData]=useState([]);
     const [emailFilter,setFilterEmail]=useState('');
     const [nameFilter,setFilterName]=useState('');
@@ -21,6 +21,7 @@ const UsersTable = () => {
             catch (error){
                 console.error("Error fetching user data:",error);
             }
+            finally{setLoading(false);}
         };
         fetchData();
         
@@ -34,6 +35,9 @@ const UsersTable = () => {
         <div class="displayi">
         <div>
             <h1>Users Table</h1>
+            {loading? (
+                <p>Loading...</p>
+            ):(<>
             <label for="name">Name:</label>
 <input type="text" id="name" name="name"  value={nameFilter} onChange={(e)=>setFilterName(e.target.value)}/>
            <br></br>
@@ -58,8 +62,8 @@ const UsersTable = () => {
                         </tr>
                     ))}
                 </tbody>
-            </table>
-            </div> <div>
+            </table></>
+           )} </div> <div>
             <UserPosts userId={userId}></UserPosts>
         </div>
         </div>

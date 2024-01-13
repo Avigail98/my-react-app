@@ -33,8 +33,7 @@
       text-align: center;
   }
   .users{
-      display: flex;
-      align-items: center;
+      align-items: center; 
   }
   
   .post {
@@ -47,7 +46,8 @@
       margin-left:auto; 
   margin-right:auto;
   text-align: right;
-  
+  float: right;
+  max-width: 400px;
   }
   td{
       border: 1px solid black;

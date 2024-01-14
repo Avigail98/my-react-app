@@ -12,9 +12,13 @@
   color: rgba(211, 11, 4, 0.646);
   font-size: 34px;
   text-align: center;
-  margin-top: 0px;
+  margin-top: 30px;
   }
   
+  .post-title{
+    margin-top: auto;
+
+  }
   .displayi{
       display: flex;
       flex: 3 1;
@@ -34,6 +38,7 @@
   }
   .users{
       align-items: center; 
+      margin-top: 50px;
   }
   
   .post {
@@ -48,13 +53,14 @@
   text-align: right;
   float: right;
   max-width: 400px;
+  top: 300px;
   }
   td{
       border: 1px solid black;
   
   }
   th{
-      color: brown;
+      color: brown;  
   }
   
   tr{
@@ -64,3 +70,7 @@
       font-weight: bold;
   
   }
+.create {
+  margin: 100px;
+  margin-left: 300px;
+}

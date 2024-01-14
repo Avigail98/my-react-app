@@ -58,7 +58,7 @@ const UserPosts = ( props) => {
 
     return ( 
 
-        <div><button style={{visibility:!props.userId?"hidden": "visible"}} onClick={()=>setDialog(!dialog)}>Create new post</button>
+        <div><button class="create" style={{visibility:!props.userId?"hidden": "visible"}} onClick={()=>setDialog(!dialog)}>Create new post</button>
 
         <form method="post" onSubmit={handleSubmit} style={{visibility:dialog?"hidden": "visible"}}>
        
@@ -67,8 +67,7 @@ const UserPosts = ( props) => {
        <br></br> <button type="Submit">Submit</button>
              
         </form>
-        <br></br>
-            <h1>Posts</h1>
+            <h1 class="post-title" style={{visibility:!props.userId?"hidden": "visible"}} >Posts</h1>
             <table class="postTable" >
                 {postsFilter?.map((poo) => ( 
             <tr key ={poo.id}><h4 class="post">{poo.title }</h4>

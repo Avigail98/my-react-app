@@ -56,18 +56,19 @@ const UserPosts = ( props) => {
     }
 
 
-    return ( 
+    return (
+        <div>
+            <button class="create" style={{visibility:!props.userId?"hidden": "visible"}} onClick={()=>setDialog(!dialog)}>Create new post</button>
 
-        <div><button class="create" style={{visibility:!props.userId?"hidden": "visible"}} onClick={()=>setDialog(!dialog)}>Create new post</button>
+<form class="postform" method="post" onSubmit={handleSubmit} style={{visibility:dialog?"hidden": "visible"}}>
 
-        <form class="postform" method="post" onSubmit={handleSubmit} style={{visibility:dialog?"hidden": "visible"}}>
-       
-            <label>Title:</label> <textarea value={title} required onChange={(e)=>setTitle(e.target.value)} /><br></br>
-            <label>Body:</label> <textarea value={body} required onChange={(e) =>setBody(e.target.value)} />
-       <br></br> <button type="Submit">Submit</button>
-             
-        </form>
-            <h1 class="post-title" style={{visibility:!props.userId?"hidden": "visible"}} >Posts</h1> 
+    <label>Title:</label> <textarea value={title} required onChange={(e)=>setTitle(e.target.value)} /><br></br>
+    <label>Body:</label> <textarea value={body} required onChange={(e) =>setBody(e.target.value)} />
+<br></br> <button type="Submit">Submit</button>
+     
+</form>
+            {/* <h1 class="post-title">Posts</h1>  */}
+            
             <table class="postTable" >
                 {postsFilter?.map((poo) => ( 
             <tr key ={poo.id}><h4 class="post">{poo.title }</h4>
@@ -76,6 +77,8 @@ const UserPosts = ( props) => {
                 ))
                 }
             </table>
+            
+              
         </div>
      );
 }

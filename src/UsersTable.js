@@ -48,7 +48,6 @@ const UsersTable = () => {
 
 
 <div id="main">
-        {/* <div class="displayi"> */}
         <div>
             {loading? (
                 <p>Loading...</p>
@@ -82,9 +81,9 @@ const UsersTable = () => {
            </div>
 
            <div id="posttable">
-<div>
+
      <UserPosts userId={userId}></UserPosts>
-     </div>
+     
 </div>
 </body>
         </div>

@@ -10,20 +10,29 @@
   h1{
   font-family: Arial, Helvetica, sans-serif;
   color: rgba(211, 11, 4, 0.646);
-  font-size: 34px;
+  font-size: 45px;
   text-align: center;
   margin-top: 30px;
   }
   
-  .post-title{
-    margin-top: auto;
+  a {
+    color: #100404;
+    text-decoration: none;
 
   }
-  .displayi{
-      display: flex;
-      flex: 3 1;
+
+  a:hover {
+    color: crimson;
+  }
+
+
+  .post-title{
+    text-align: center;
+    /* margin-top: auto; */
+
   }
   
+
   table {
   text-align: center;
   border-collapse: collapse;
@@ -42,19 +51,21 @@
   }
   
   .post {
-      text-align: left;
+      text-align: center;
   }
   
   .postTable{
       margin: 0%;
       padding: 4px;
       margin-left:auto; 
-  margin-right:auto;
-  text-align: right;
-  float: right;
-  max-width: 400px;
-  top: 300px;
+      margin-right:auto;
+      text-align: right;
+ 
   }
+  .postTable tr:nth-child(even){
+    background-color:#e3615d;
+  }
+
   td{
       border: 1px solid black;
   
@@ -70,7 +81,61 @@
       font-weight: bold;
   
   }
-.create {
+/* .create {
   margin: 100px;
   margin-left: 300px;
+} */
+input[type=text]
+{
+  padding: 10px;
+  border-radius: 3px;
+
+}
+.postform{
+  margin-left:auto; 
+      margin-right:auto;
+      border-style: none;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+ul{
+  list-style: none;
+}
+.wrapper{
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px ;
+}
+
+.rouge{
+  color: #100404;
+  font-weight: bold;
+}
+header{
+  height: 120px;
+
+}
+header h1{
+  float: left;
+  margin-top: 32px;
+}
+header nav{
+  float: right;
+  margin-top: 50px;
+  align-items: center;
+}
+header nav ul li{
+  display: inline-block;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header nav ul li a{
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #100404;
 }

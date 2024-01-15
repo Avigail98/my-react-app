@@ -1,8 +1,7 @@
 import UsersTable from './UsersTable';
 
 const Home = () => {
-    return ( 
-      
+    return (
 <UsersTable></UsersTable>
      );
 }

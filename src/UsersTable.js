@@ -77,18 +77,15 @@ const UsersTable = () => {
                     ))}
                 </tbody>
             </table></>
-           )}   </div> 
-           </div>
+           )}   
+        </div> 
+</div>
 
            <div id="posttable">
-
      <UserPosts userId={userId}></UserPosts>
-     
-</div>
+            </div>
 </body>
         </div>
-
-        
 
     );
 }

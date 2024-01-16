@@ -2,21 +2,17 @@ import { useEffect, useState } from "react";
 
 const UserPosts = ( props) => {
 
-    // const [postData,setPostData]=useState([]);
     const [dialog,setDialog]=useState(true);
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
     const [postsFilter,setPostsFilter]=useState([]);
 
 
-    // const filterPosts = postData.filter((e)=>e.userId===props.userId);
-
     useEffect(() =>{
         const fetchData=async() =>{
             try{
                 const response= await fetch('https://jsonplaceholder.typicode.com/posts');
                 const data=await response.json();
-                // setPostData(data)
                 setPostsFilter(data.filter((e)=>e.userId===props.userId) )
             }
             catch (error){
@@ -31,7 +27,6 @@ const UserPosts = ( props) => {
         e.preventDefault();
         
         var userid=props.userId
-
         const post = {userid, title, body};
 
      fetch('https://jsonplaceholder.typicode.com/posts', {
@@ -64,7 +59,8 @@ const UserPosts = ( props) => {
 
     <label>Title:</label> <textarea value={title} required onChange={(e)=>setTitle(e.target.value)} /><br></br>
     <label>Body:</label> <textarea value={body} required onChange={(e) =>setBody(e.target.value)} />
-<br></br> <button type="Submit">Submit</button>
+    <br></br> 
+    <button type="Submit">Submit</button>
      
 </form>
             {/* <h1 class="post-title">Posts</h1>  */}
